@@ -1,2 +1,2 @@
 # MIND
-Microsoft News Dataset
+Microsoft News Dataset is a large-Scale English dataset for news recommendation research. This repository provides the script to evaluate models and a sample submission for [MIND News Recommendation Challenge](https://competitions.codalab.org/competitions/24122?secret_key=e075b839-d0cb-4c7b-b755-b34c5a666cba).
