@@ -1,0 +1,14 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# vs code
+.vscode
+event.out.tfevent*
+
+# vim
+.*.sw?
+
+# mac
+.DS_Store
