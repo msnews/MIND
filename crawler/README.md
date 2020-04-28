@@ -18,7 +18,7 @@ The conda enviroment is exported to enviroments.yaml. To create a conda envirome
 
 ```sh
 conda env create -f environment.yaml
-onda activate scrapy
+conda activate scrapy
 ```
 
 Run the crawler:
