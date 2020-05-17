@@ -1,1 +1,0 @@
-(function(){var d=document;var load=function(){var i=d.createElement('IFRAME');i.style.display='none';i.width=0;i.height=0;i.src='//eb2.3lift.com/sync?';d.body.appendChild(i);};if(d.readyState==="complete"){load();}else{window.addEventListener("load",load,false);}})();

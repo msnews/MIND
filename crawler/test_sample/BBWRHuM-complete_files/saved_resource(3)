@@ -1,31 +1,0 @@
-
-var ftGUID_4596449="4451F2BF058A6F";
-var ftConfID_4596449="20691798";
-var ftParams_4596449="ftx=&fty=&ftadz=&ftscw=&ft_custom=&ftOBA=1&ft_agentEnv=0&ft_referrer=https%3A%2F%2Fwww.msn.com%2Fen-us%2Fsports%2Ffootball_nfl%2Fpittsburgh-steelers-well-represented-in-the-top-10-of-the-nfl%27s-top-100-teams%2Far-BBWRHuM%3Focid%3Dchopendata&cachebuster=193435.6512820392";
-var ftKeyword_4596449="";
-var ftCustom_4596449="";
-var ftSection_4596449="";
-var ftSegment_4596449="";
-var ftSegmentList_4596449=[];
-var ftRuleMatch_4596449="0";
-var ftTimestamp_4596449="1589753638";
-var ftGeoC2_4596449="us";
-var ftGeoState_4596449="wa";
-var ftGeoCity_4596449="bellevue";
-var ftISP_4596449="comcast cable communications inc.";
-var ftSpeed_4596449="cable";
-var ftDMA_4596449="819";
-var ftLong_4596449="-122.21";
-var ftLat_4596449="47.62";
-var ftPostal_4596449="98004";
-var ftTimeZone_4596449="-700";
-var ftMobileCarrier_4596449="";
-var ftImp4596449 = {};
-ftImp4596449.privacy = "x";
-ftImp4596449.guidAge = "69";
-ftImp4596449.impID = "DDDC5356-101A-975A-F81A-08F0149ACFE7";
-ftImp4596449.duid = "FT:4451F2BF058A6F";
-ftImp4596449.ft_tpplid = "";
-ftImp4596449.ft_c = {};
-
-document.write('<scr'+'ipt src="https://cdn.flashtalking.com/xre/459/4596449/2860358/js/j-4596449-2860358.js" id="ftscript_m4596449" name="ftscript_m4596449"></scr'+'ipt>');
