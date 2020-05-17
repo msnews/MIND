@@ -1,0 +1,612 @@
+(function() {
+    function onUnitLoaderLoad() {
+        
+var iframe = document.createElement('iframe');
+iframe.src = '//imprchmp.taboola.com/st?cipid=7994267&ttype=0&cirid=17E44CA1461822161513307179&cicmp=2021075&cijs=1&dast=V7Se4CFgNTxZtv0I48OARTxZtv0I48OAUAAAAGBvkHGrFbkUYbBmM0Wwwnk8VqsRjudsPFZDeYwoiwzH7fQUE5PT1ml0HStL0sB1nT5PIb1AIRy_M1_Q1vCLRE0-nwue71ut_vrvbc7Rq_26-yu1Wfv-bwt5w-f5nfb7o4zGZ_3Wb2C56m0-fiuvyMbs3p5TK7LJ-37mU2uyUvw-XledlNL5NbaXeLji636G94KwZrvc0tOrrccpvZp3mL_oa3YjBYi14Ot-evsLwlFF6lyHrz9x6nyb0x-g0vu8lhetgBAAAA4AEASvMX4gcAACACAAAAQOIHAACAIqDi30LgAgAAAAAD4IDsWwNgnCNhHm63w-30HP0BAPBQAAIAIIARAgAAECACAAAAMAIAABBAAiAgOVsCYIHXZQIAECBHEsp-cwIAAHBQJ_O0zfL___8fA5C3vykD4GE9fbPQA_DgA_AgBAAAcDF0AQpJwHgCG0x0YFHECAAAAAAD4g72aFInVBZV_____1YAVwAAAXIks2PkWToDEm9hAAAABWML9LD4_WaHXeN3u-z_________3-z_DABNyEcvPE2YPkNT7QcAAGDtFxAAgE3dAADeBOBiDsAOAAAA4O7___8_DwAAwGOPku21Gs8eZb1vRFhmv--goJyeHrPLIGnaXpaDrGly-Q1qgYjl-Zr-hvtN2GK0mkw2y-FsuZgMhqPhaLQ_AVwMcCIGy-VkspjsVqPVaDPcjWaDBQrEYIITMhxtJqvRbrWbLIeT0Wi2mWyQolWr2WgzGK5mk9lutxoOhsvRCClas5hNJovZaLnbDJaT0WA4GQ6RBIYbi2_jcLhFy41pLRqZVm6Jy-RbC1eLjWdimW0szpUfG2Q0V8zmisVyrtjNVgkAAAAAAAAAYAlT5k0AAAAAToOYDWeT3XIBHjpdh0FmM1qsFpvRbDdYjXajwXAwWywcC5fN5THsFpuViUFmxRtRZjQKczaj0JYLzmTE4UxWuwlzMqPQFqTdihtvZg0AAAAA!&excid=22&tst=1&docw=0&cs=false';
+iframe.style.display = 'none';
+document.body.appendChild(iframe);
+
+
+var isApp = false;
+
+cmTag.set('version', '23_2_8');
+
+cmTag.set('sync', 'https://ch-match.taboola.com/sync?dast=V7GJ8CFgNTxZtv0I48OARTxZtv0I48OAUAAAAGBvkHGrFbkUYbBmM0Wwwnk8VssVpsNoPdYrccgkbsVqTRhsEYzRbDyWSxWiyGu91wMdkNpjAiLLPfd1BQTk-P2WWQNG0vy0HWNLn8BrVAxPJ8TX_DGwIt0XQ6fK57ve73u6s9d7vG7_ar7G7V5685_C2nz1_m95suDrPZX7eZ_YKn6fS5uC4_o1tzernMLsvnrXuZzW7Jy3B5eV5208vkVtrdoqPLLfob3orBWm9zi44ut9xm9mneor_hrRgM1qKXw-35KyxvCYVXKbLe_L3HaXJvjH7Dy25ymB52AAAAAHgAgNL8hfgBAACIAAAAAJD4AQAAoAio-LcQuAAAAADAADgg-9YAGOdImIfb7XA7PUd_AAA8FIAAAAhghAAAAASIAAAAAIwAAAAEkAAISM6WAFjgdZkAAATIkYSy35wAAAAc1Mk8bbP8____xwDk7W_KAHhYT_cAPPgAPBAdWBQxAgAAAMCAuIM9mtQJlUXV____vxXAFQBAgBzJ7Bh5GAAAQMHYAj0sfr_ZYdf43S77_________zf7PwNAE_LRC08Tps_QVPsBAABY-wUEAGBTNwCANwG4mAOwAwAAALj7____zwMAAPDYo2R7rcazR1nvGxGW2e87KCinp8fsMkiatpflIGuaXH6DWiBieb6mv-F-E7YYrSaTzXI4Wy4mg-FoOBrtTwAXA5yIwXI5mSwmu9VoNdoMd6PZYIECMZjghAxHm8lqtFvtJsvhZDSabSYbpGjVajbaDIar2WS2262Gg-FyNEKK1ixmk8liNlruNoPlZDQYToZDJIHhxuLbOBxu0XJjWotGppVb4jL51sLVYuOZWGYbi3PlxwYZzRWzuWKxnCt2s1UCAAAAAAAAAFjClHkTAAAAgNMgZsPZZLdcgIdO12GQ2YwWq8VmNNsNVqPdaDAczBYLx8Jlc3kMu8VmZWKQWfFGlBmNwpzNKLTlgjMZcTiT1W7CnMwotAVpt-LGm1kDAAAAAA!&excid=22&docw=0&cijs=1&nlb=true');
+
+cmTag.set("player.settings.kaxwnc", 0);
+
+
+cmTag.setByCondition({
+  conditions: [{
+    key: "ep",
+    val: 1
+  }],
+  settings: {
+    isMultiAd: false
+  }
+});
+cmTag.set("unitType", "MSN_WIDGET");
+cmTag.set("preset", {
+  "level": 1
+});
+cmTag.set('player.settings.regx', '\x22\x64\x65\x6D\x61\x6E\x64\x53\x6F\x75\x72\x63\x65\x49\x64\x22\x3A\x35\x34\x36\x38\x34\x7C\x2E\x63\x6C\x65\x61\x72\x73\x74\x72\x65\x61\x6D\x2E\x74\x76\x7C\x2E\x63\x6C\x72\x73\x74\x6D\x2E\x63\x6F\x6D\x7C\x74\x6D\x2D\x70\x72\x6F\x6D\x6F\x2E\x73\x33\x2E\x61\x6D\x61\x7A\x6F\x6E\x61\x77\x73\x7C\x61\x64\x76\x65\x72\x74\x69\x73\x69\x6E\x67\x73\x74\x6F\x72\x79\x2E\x63\x6F\x6D\x7C\x6D\x65\x64\x69\x61\x67\x72\x6F\x75\x70\x61\x64\x73\x2E\x63\x6F\x6D\x7C\x65\x6C\x69\x74\x65\x6C\x6D\x65\x64\x69\x61\x61\x64\x76\x65\x72\x74\x69\x73\x69\x6E\x67\x2E\x63\x6F\x6D\x7C\x76\x65\x72\x74\x61\x6D\x65\x64\x69\x61\x2E\x63\x6F\x6D\x7C\x6D\x65\x64\x69\x61\x67\x72\x6F\x75\x70\x70\x72\x6F\x2E\x63\x6F\x6D\x7C\x68\x69\x67\x68\x72\x61\x74\x65\x64\x61\x64\x73\x2E\x63\x6F\x6D\x7C\x2E\x76\x69\x64\x65\x6F\x67\x72\x61\x6D\x6D\x69\x63\x2E\x63\x6F\x6D\x7C\x76\x69\x64\x65\x6F\x67\x72\x61\x6D\x6D\x69\x63\x2E\x63\x6F\x6D\x7C\x66\x69\x6C\x65\x73\x2E\x77\x65\x62\x76\x69\x64\x65\x6F\x67\x6C\x6F\x62\x61\x6C\x2E\x63\x6F\x6D\x7C\x77\x65\x62\x76\x69\x64\x65\x6F\x67\x6C\x6F\x62\x61\x6C\x2E\x63\x6F\x6D\x7C\x77\x65\x62\x6D\x65\x64\x69\x61\x61\x70\x70\x2E\x63\x6F\x6D\x66\x69\x6C\x65\x73\x2E\x77\x65\x62\x6D\x65\x64\x69\x61\x61\x70\x70\x2E\x63\x6F\x6D\x7C\x6D\x61\x72\x6B\x65\x74\x69\x6E\x67\x76\x69\x64\x65\x6F\x6E\x6F\x77\x2E\x63\x6F\x6D\x7C\x70\x6F\x70\x6F\x76\x69\x64\x65\x6F\x61\x64\x2E\x63\x6F\x6D\x7C\x73\x79\x6E\x63\x6E\x6F\x61\x64\x3F\x7C\x64\x61\x66\x61\x63\x64\x64\x2E\x61\x73\x69\x61\x7C\x73\x62\x2E\x77\x69\x6E\x39\x39\x39\x77\x69\x6E\x2E\x63\x6F\x6D\x7C\x6E\x73\x73\x66\x2E\x63\x6F\x6D\x7C\x75\x70\x69\x65\x77\x2E\x63\x6F\x6D\x7C\x70\x69\x65\x77\x2E\x63\x6F\x6D\x7C\x76\x2E\x73\x68\x75\x6C\x63\x6F\x6E\x74\x2E\x63\x6F\x6D\x7C\x76\x2E\x61\x6C\x67\x6F\x76\x69\x64\x2E\x63\x6F\x6D\x7C\x76\x69\x64\x2E\x73\x70\x72\x69\x6E\x67\x73\x65\x72\x76\x65\x2E\x63\x6F\x6D');
+
+cmTag.set('player.settings.hjkbldomsencdd', ["dGFncy5ia3J0eC5jb20=", "bGlwaWthcl9ib2R5Y2FyZV9hd2FyZW5lc3M=", "Z2FjZG4=", "bWlycmEuaW8=", "YnJ0bWVkaWE=", "VUEtNTcwODQyNTctNw==", "Y29pbi1oaXZlLmNvbQ==", "YnVuZGxlLmNsZWFyc3RyZWFtLnR2", "LmNscnN0bS5jb20=", "dmlkZW8ubGVhZHp1LmNvbQ==", "LmxlYWR6dS5jb20=", "czAuMm1kbi5uZXQvYWRzL3JpY2htZWRpYS9zdHVkaW8vcHYyLzYwMTI4Njk2Lw==", "YWR2ZXJ0aXNpbmdzdG9yeS5jb20=", "bWVkaWFncm91cGFkcy5jb20=", "ZWxpdGVsbWVkaWFhZHZlcnRpc2luZy5jb20=", "dmVydGFtZWRpYS5jb20=", "bWVkaWFncm91cHByby5jb20=", "aGlnaHJhdGVkYWRzLmNvbQ==", "dmlkZW9ncmFtbWljLmNvbQ==", "bWFya2V0aW5ndmlkZW9ub3cuY29t", "c3RhdGljLm1hcmtldGluZ3ZpZGVvbm93LmNvbQ==", "ZmlsZXMud2VidmlkZW9nbG9iYWwuY29t", "d2VidmlkZW9nbG9iYWwuY29t", "d2VibWVkaWFhcHAuY29t", "ZmlsZXMud2VibWVkaWFhcHAuY29t", "cG9wb3ZpZGVvYWQuY29t", "c2Iudm9pY2VmaXZlLmNvbQ==", "b25lLm00ZGMuY29t", "dXBpZXcuY29t", "cGlldy5jb20=", "di5zaHVsY29udC5jb20=", "di5hbGdvdmlkLmNvbQ==", "dmlkLnNwcmluZ3NlcnZlLmNvbQ=="]);
+
+cmTag.set('liteUnitVersion', '1.7.1');
+cmTag.set('player.versions.vplayer', 'v11.2.8');
+cmTag.set("components.adChoice.isActive", false);
+cmTag.set("timeBetweenAds", 0);
+cmTag.set('player.settings.anltcsurlv2', '/vpaid/vpaidAnalytics.3.js');
+cmTag.set('player.settings.anltcsurlv4', '/vpaid/vpaidAnalytics.31.js');
+cmTag.set('player.settings.hjkv1', '/vpaid/hjk.226.js');
+cmTag.set("canStartPlayer", true);
+cmTag.set('isAnimateOnClose', true);
+cmTag.set('isToggleIframeContent', true);
+cmTag.set("player.settings.use_flash_player", false);
+cmTag.set('isPWOV', true);
+cmTag.set('secondsToCloseGlobal', 2700);
+cmTag.set('pubViewabilityPercent', 0);
+cmTag.set('player.settings.vidfkadldt', 100);
+cmTag.set('player.settings.mintimwf', 5000);
+cmTag.set('player.settings.dlyimpnonmoatrv', 1);
+cmTag.set('player.settings.frgtadpxls', 0);
+cmTag.set('player.settings.rprtwrpropntime', true);
+cmTag.set('player.settings.slwcnctlngt', 10);
+
+cmTag.set('additionalCss', {
+  'text-align': 'left'
+});
+
+cmTag.set('player.urls.contentVideosLocation', '//vidstatb.taboola.com/vid');
+cmTag.set('player.urls.contentImagesLocation', '//vidstatb.taboola.com/vid/img');
+cmTag.set('microServices.PMS.version', '3.0.6');
+cmTag.set('unitsBaseUrl', '//vidstat.taboola.com/vpaid/units/');
+cmTag.set('player.urls.vplayerLocation', '//vidstat.taboola.com/vpaid/vPlayer');
+cmTag.set('player.settings.encwfrs', true);
+cmTag.set('hasSupportTool', true);
+cmTag.set('player.settings.dsu', '/vpaid/ds/181/dsm.js');
+cmTag.set('bllblevt', '1,25,21,22,23,24');
+cmTag.set('player.settings.qsrtscr', function(it, vpd) {
+  if (vpd.alfrox === 0 && vpd.rpox > 0)
+
+  {
+    return ((vpd.requiredViewability << 30) | (vpd.priority << 16) | parseInt(vpd.rpox * 1000));
+  }
+  return ((vpd.requiredViewability << 30) | (vpd.priority << 16) | parseInt(vpd.alfrox * vpd.rpox * 1000));
+});
+
+
+
+var dsvr = "" || false;
+cmTag.set("player.settings.dataSaver", dsvr === 'on');
+if (dsvr === 'on') {
+  cmTag.set("player.settings.max_ready_vpaid", 4);
+  cmTag.set("player.settings.mintimwf", 5000);
+}
+
+cmTag.set("countryIsoCode", "usa");
+cmTag.setByCondition({
+  conditions: [{
+    key: 'countryIsoCode',
+    val: 'tha'
+  }],
+  settings: {
+    'pubId': 208401,
+    'pubTagId': 1047981,
+    'preroll.pubId': 208401,
+    'preroll.pubTagId': 1047981,
+    'midroll.pubId': 208401,
+    'midroll.pubTagId': 1047981,
+    'postroll.pubId': 208401,
+    'postroll.pubTagId': 1047981
+  }
+});
+
+cmTag.setByCondition({
+  conditions: [{
+    key: 'country',
+    val: 'TH'
+  }],
+  settings: {
+    'pubId': 208401,
+    'pubTagId': 1047981,
+    'preroll.pubId': 208401,
+    'preroll.pubTagId': 1047981,
+    'midroll.pubId': 208401,
+    'midroll.pubTagId': 1047981,
+    'postroll.pubId': 208401,
+    'postroll.pubTagId': 1047981
+  }
+});
+
+cmTag.set('pixels.startWithABT.isFire', true);
+cmTag.set('player.settings.measureKPI', true);
+cmTag.set('player.settings.msrkpifctr', 10);
+cmTag.set('player.settings.msrkpiintvl', 15);
+cmTag.setByCondition({
+  conditions: [
+
+    {
+      key: 'preset.level',
+      val: 1
+    }
+  ],
+  settings:
+
+  {
+    'preset.level': 2
+  }
+});
+cmTag.push('abTest', 'lv12_vB');
+cmTag.push('abTest', 't45');
+
+  cmTag.set('version', '27_6_12');
+cmTag.set('pixels.url', '//ch-vid-events.taboola.com/st');
+cmTag.set('pixels.unitLoadedWithFill.isFire', false);
+cmTag.set('fireLoadUnitPixelsFactor', 10);
+cmTag.set("player.settings.sndvltopp", false);
+cmTag.set("secondsToClose", 120);
+cmTag.set("adMaxPlaySeconds", 210);
+cmTag.set('player.settings.prtct', '/vpaid/hjk.16.js');
+cmTag.set('player.settings.cntonvfrc', false);
+cmTag.set('player.settings.mxemptwf', 5);
+cmTag.set('player.settings.ltmxemptwf', 5);
+cmTag.set('player.settings.erlyai', true);
+cmTag.set("player.settings.timbtopps", 5000);
+cmTag.set('player.settings.frstlk', true);
+cmTag.set('viewPercent', '50');
+cmTag.set('player.settings.tglifrmcntndsplyactv', true);
+cmTag.set('player.settings.aduntldflbfruntld', true);
+cmTag.set('timbtopps', 5000);
+cmTag.set('cookieMatchActive', true);
+
+// Cookie sync predictor config
+cmTag.set('predictors.time.cookieSync.isActive', true);
+cmTag.set('predictors.time.cookieSync.lengthInSeconds', 20);
+cmTag.set('predictors.time.cookieSync.repeat', 1);
+
+cmTag.push = cmTag.push || function() {};
+
+cmTag.set("player.settings.tmbtwfs", function(successes, failures, store) {
+  if (failures > 45) {
+    return 999;
+  }
+  return store.get('time_between_waterfall');
+});
+
+
+cmTag.set('player.settings.mntmbtwfsf', function(successes, failures, store) {
+  if (failures > 45) {
+    return 999000;
+  }
+  return store.get('mintimwf');
+});
+
+
+
+cmTag.set('unitThrottlerFiltered', "false");
+
+cmTag.setByCondition({
+  conditions: [{
+      key: 'preset.level',
+      val: 1
+    },
+    {
+      key: "unitThrottlerFiltered",
+      val: "true"
+    }
+  ],
+  settings: {
+    'preset.level': 3
+  }
+});
+
+
+
+
+
+
+
+
+
+  cmTag.set("player.settings.frcmtfrms", true);
+cmTag.set("player.settings.fire_piggies", true);
+cmTag.set("secondsBW", 17);
+cmTag.set("player.settings.adto", 300000);
+cmTag.set("player.settings.vakll", 300000);
+
+cmTag.set("player.settings.rstmrai", true);
+
+cmTag.set("player.settings.dsktmouttoadcmpltn", 30000);
+cmTag.set("player.settings.mprdct", 0.033);
+cmTag.set("category", "ShortContent");
+
+
+cmTag.setByCondition({
+  conditions: [{
+    key: 'preset.level',
+    val: 2
+  }],
+  settings: {
+    'player.settings.mprdct': 0.033
+  }
+});
+
+cmTag.setByCondition({
+  conditions: [{
+    key: 'preset.level',
+    val: 3
+  }],
+  settings: {
+    'player.settings.mintimwf': 7000
+  }
+});
+
+  cmTag.set('isStartUnitOnWindowLoaded', true);
+cmTag.set('isLoadUnitOnWindowLoaded', true);
+
+cmTag.set('isMultiUnit', true);
+
+cmTag.set("pubId", 198827);
+cmTag.set("pubTagId", 1020237);
+
+cmTag.set('player.settings.scrmf', false);
+cmTag.set("secondsToClose", 200);
+cmTag.set("player.settings.vakll", 240000);
+cmTag.set("player.settings.mprdct", 0.025);
+cmTag.set("onOutOfView", "pause");
+cmTag.set('hasSupportTool', false);
+cmTag.set('player.settings.mntmbtwfsf', function(successes, failures, store, isDocVisible) {
+  return store.get('mintimwf');
+});
+cmTag.set('player.settings.tmbtwfs', function(successes, failures, store, isDocVisible) {
+  return store.get('time_between_waterfall');
+});
+cmTag.setByCondition({
+  conditions: [{
+    key: 'preset.level',
+    val: 3
+  }],
+  settings: {
+    'player.settings.mintimwf': 5000
+  }
+});
+cmTag.set("secondsBW", 10);
+cmTag.set('player.settings.regx', '\x76\x69\x64\x2E\x73\x70\x72\x69\x6E\x67\x73\x65\x72\x76\x65\x2E\x63\x6F\x6D');
+cmTag.set('parentSelector', 'div.rcdw');
+cmTag.set('predictors.multiAd.predictPoints.1.qState', 'q3');
+cmTag.set('predictors.multiAd.predictPoints.0.qState', 'q1');
+cmTag.set('isOppsulaEnabled', false);
+cmTag.set('microServices.PMS.version', '2.2.5');
+cmTag.set("isStartUnitOnWindowLoaded", true);
+cmTag.set("isMultiAd", true);
+cmTag.set("components.OptOut.hasOptOut", false);
+cmTag.set("player.settings.disctxt", "");
+cmTag.set("components.adChoice.isActive", true);
+cmTag.set('components.adChoice.videoAd.style.background', 'green');
+cmTag.set('components.adChoice.videoAd.adViewStyle.padding', '0px 5px 0px 7px');
+cmTag.set('components.adChoice.videoAd.adViewStyle.background-color', 'rgba(202, 202, 202, 0.57)');
+cmTag.set('components.adChoice.videoAd.adViewStyle.border-radius', '0.2rem');
+cmTag.set('components.adChoice.videoAd.style.width', 'auto');
+cmTag.set('components.adChoice.videoAd.style.border-radius', '0.2rem');
+cmTag.set('components.adChoice.videoAd.style.font-size', '11px !important');
+cmTag.set('components.adChoice.videoAd.style.font-weight', 'normal');
+cmTag.set('components.adChoice.videoAd.style.font-family', '"Segoe UI","Segoe WP",Arial,Sans-Serif');
+cmTag.set('components.adChoice.videoAd.style.line-height', '16px');
+cmTag.set('components.adChoice.videoAd.style.text-align', 'center');
+cmTag.set('components.adChoice.videoAd.logoStyle.height', '12px');
+cmTag.set('components.adChoice.videoAd.adViewStyle.line-height', '26px');
+cmTag.set('components.adChoice.videoAd.adViewStyle.font-size', '0px');
+cmTag.set('components.adChoice.videoAd.style.margin-right', '9px');
+cmTag.set('components.adChoice.videoAd.logoStyle.margin-top', 0);
+cmTag.set('components.adChoice.videoAd.style.padding', '.1rem .6rem .2rem .6rem');
+
+cmTag.set('publisherDetectorDelayInMs', 3000);
+cmTag.set("isOpenInViewPort", false);
+cmTag.set("animati3n.onTransitionOpen", false);
+cmTag.set("closeButton.hasCloseButton", true);
+cmTag.set("onTimerClose", "close");
+cmTag.set('components.volume.isActive', true);
+cmTag.set('player.settings.shwadmtebtn', false);
+cmTag.set('components.volume.isAlwaysBottom', true);
+cmTag.set("preset.level", 1);
+
+cmTag.set('predictors.distancePixels.predictPoints.0.pixelsFromSelectors', 1100);
+
+cmTag.set('components.adLoadingProgress.isActive', false);
+cmTag.set('isOpenInViewPort', true);
+
+
+cmTag.set('player.settings.bllblevt', '1,21,22,23,24,25,30,32');
+cmTag.set('bllblevt', '1,21,22,23,24,25,30,32');
+cmTag.set('player.settings.usscrtgurl', true);
+cmTag.set('player.settings.dsktmouttoadcmpltn', 30000);
+cmTag.set("player.settings.volume", 0);
+cmTag.set('player.settings.wtfradpsdbfrrsmad', true);
+cmTag.set('player.settings.dftgprc', 0);
+
+cmTag.set('isDetectPubVideo', false);
+
+cmTag.set('maxCards', 10);
+cmTag.set('maxAdsPerCard', 3);
+cmTag.set('predictors.multiAd.isActive', true);
+cmTag.set('predictors.playerReady.isActive', true);
+cmTag.set('predictors.playerReady.predictPoints', 0);
+cmTag.set('predictors.playerReady.isStartWF', true);
+
+cmTag.set('player.settings.qsrtscr', function(it, vpd, store) {
+  if (vpd.rpox) {
+    return parseInt(vpd.rpox * 1000);
+  } else {
+    return ((vpd.requiredViewability << 30) | (vpd.priority << 16) | parseInt(vpd.alfrox * vpd.rpox * 1000));
+  }
+});
+
+cmTag.setByCondition({
+  conditions: [{
+    key: 'preset.level',
+    val: 1
+  }],
+  settings: {
+    'player.settings.mprdct': 0.025,
+    'pubId': 198827,
+    'pubTagId': 1020237
+  }
+});
+
+cmTag.set('onFilledImpression', window.tblVideoLoaded || function() {});
+
+cmTag.set('onTerminate', window.tblVideoClose || function() {});
+
+  cmTag.set('predictors.firstScroll.isStartWF', true);
+cmTag.set('player.settings.dlywf', true);
+
+cmTag.set('parentSelector', 'div.rcdw');
+cmTag.set('predictors.multiAd.isActive', false);
+cmTag.set('predictors.firstScroll.isActive', false);
+cmTag.set('predictors.firstScroll.predictPoints', 0);
+
+cmTag.set('predictors.distancePixels.predictPoints.1.pixelsFromSelectors', 10);
+cmTag.set('predictors.distancePixels.isActive', true);
+cmTag.set('predictors.distancePercent.predictPoints.any.requirePercentageToSelector', 100);
+cmTag.set('predictors.distancePercent.isActive', false);
+cmTag.set('additionalCss.z-index', '99 !important');
+
+
+cmTag.set('predictors.distancePixels.predictPoints.any.pixelsFromSelectors', 10);
+
+cmTag.set('volume', 'off');
+
+cmTag.set('predictors.distancePixels.predictPoints.0.pixelsFromSelectors', 1200);
+cmTag.set('player.settings.rvfrquesttsemttr', 'any');
+cmTag.set('maxVimpsInQueue', 5);
+
+
+
+if ("Below Article River Video - Desktop" == "Below Article River Video - Desktop - 2nd Row") {
+  cmTag.push('abTest', 'mscr');
+  cmTag.set('predictors.distancePixels.predictPoints.0.pixelsFromSelectors', 900);
+}
+
+cmTag.set('parentSelector', '.rc-item-js');
+cmTag.set('predictors.multiAd.isActive', true);
+cmTag.set('msnCanOpenSecondRow', true);
+cmTag.set('predictors.multiAd.predictPoints.1.qState', 'q3');
+cmTag.set('predictors.multiAd.predictPoints.0.qState', 'q1');
+cmTag.set('predictors.distancePixels.isActive', true);
+
+cmTag.set('predictors.distancePixels.predictPoints', [{
+  "key": 0,
+  "pixelsFromSelectors": 950
+}, {
+  "key": 1,
+  "pixelsFromSelectors": -350
+}, {
+  "key": 0,
+  "pixelsFromSelectors": -350
+}]);
+
+cmTag.set('maxAds', 3);
+
+if (window.enableTblVideoInFirstRow || "Below Article River Video - Desktop" == "Below Article River Video - Desktop - 1st Row") {
+  cmTag.set('parentSelector', '.rc-item-js');
+  cmTag.set('msnCanOpenFirstRow', true);
+  cmTag.push('abTest', 'mfstrow_vA');
+  cmTag.set('isRvPriority', true);
+  cmTag.set('playPriority.checkForRvPriority', 'pixelsFromSelector');
+  cmTag.set('playPriority.pixelsFromSelector', 50);
+  cmTag.set('predictors.distancePixels.predictPoints.any.pixelsFromSelectors', -99999);
+  cmTag.set('predictors.distancePixels.predictPoints.0.pixelsFromSelectors', 1200);
+  cmTag.set('player.settings.dlywf', true);
+  cmTag.set('predictors.playerReady.isActive', true);
+  cmTag.set('predictors.playerReady.isStartWF', true);
+  cmTag.set('predictors.playerReady.predictPoint', [0, 0]);
+  cmTag.set('predictors.firstScroll.isActive', true);
+  cmTag.set('predictors.firstScroll.predictPoints', 0);
+  cmTag.set('predictors.isGet1OnlyAfterAdLoaded', true);
+}
+
+var _placement = "Below Article River Video - Desktop";
+if (_placement && typeof _placement == "string" && _placement.toLowerCase().indexOf("header")) {
+  cmTag.set('predictors.time.isActive', true);
+  cmTag.set('predictors.time.predictPoints', 0);
+  cmTag.set('predictors.time.lengthInSeconds', 10);
+  cmTag.set('predictors.time.repeat', 1);
+}
+
+
+
+
+
+
+
+
+
+if (document && document.querySelectorAll && document.querySelectorAll("#root").length > 0) {
+  cmTag.set("urlPrefix", "https://vidstat.taboola.com/vpaid/units/27_4_19/");
+}
+
+cmTag.set("adMaxPlaySeconds", 210);
+
+cmTag.setByCondition({
+  conditions: [{
+    key: "ep",
+    val: "1"
+  }],
+  settings: {
+    isMultiAd: false,
+    volume: "onHover",
+    isSoundOnHover: true,
+    "components.CloseButtonView.hasCloseButton": false,
+    "onOutOfView": "pause",
+    "originId": 15,
+    "preroll.pubId": 133128,
+    "preroll.pubTagId": 779408,
+    "midroll.pubId": 133128,
+    "midroll.pubTagId": 779408,
+    "postroll.pubId": 133128,
+    "postroll.pubTagId": 779408,
+    "pubId": 133128,
+    "pubTagId": 779408,
+    "player.settings.mprdct": 0,
+    "player.settings.encwfrs": false,
+    "player.settings.cmbopps": false,
+    isPWOV: false
+  }
+});
+
+if (window.conf300 == 1) {
+  cmTag.set("urls.staticImage", "//cdn.cmeden.com/img/play_image_169.jpg");
+}
+
+cmTag.set("multiUnitManager.isActive", true);
+
+
+cmTag.setByCondition({
+  conditions: [{
+    key: "player.versions.content",
+    val: "26_1_18m"
+  }],
+  settings: {
+    "player.versions.content": "14_10_18m"
+  }
+});
+
+
+cmTag.push('abTest', 'ptag8_vA');
+cmTag.set('pixels.startWithABT.isFire', true);
+
+
+
+
+cmTag.setByCondition({
+  conditions: [{
+    key: 'country',
+    val: 'IL'
+  }],
+  settings: {
+    'stickyCard.isActive': false,
+  }
+});
+
+
+
+
+
+
+
+
+
+cmTag.set('pixels.startWithABT.isFire', true);
+cmTag.push('abTest', 'ntvc_vA');
+
+cmTag.set('pixels.startWithABT.isFire', true);
+cmTag.set('pixels.exploreMore.isFire', true);
+cmTag.set('disableExploreMoreVideo', false);
+cmTag.set('isSendDebugDataReporting', true);
+cmTag.push('abTest', 'explr_vA');
+
+
+
+
+
+
+cmTag.push('abTest','pl1129a_vA'); cmTag.set('pixels.startWithABT.isFire', true); cmTag.set('player.settings.dsu', '/vpaid/ds/182/dsm.js'); cmTag.set('player.versions.vplayer', 'v11.2.9');
+  
+
+
+
+
+
+
+
+
+cmTag.set('pixels.startWithABT.isFire', true);
+cmTag.push('abTest', 'afc9_vH');
+
+
+
+
+
+
+
+
+cmTag.set('pixels.startWithABT.isFire', true);
+cmTag.push('abTest', 'expl_vB');
+cmTag.push('abTest', 'expl_vU');
+  cmTag.set("player.settings.volume", 0);
+cmTag.setMacros({
+  dast: "V7GJ8CFgNTxZtv0I48OARTxZtv0I48OAUAAAAGBvkHGrFbkUYbBmM0Wwwnk8VssVpsNoPdYrccgkbsVqTRhsEYzRbDyWSxWiyGu91wMdkNpjAiLLPfd1BQTk-P2WWQNG0vy0HWNLn8BrVAxPJ8TX_DGwIt0XQ6fK57ve73u6s9d7vG7_ar7G7V5685_C2nz1_m95suDrPZX7eZ_YKn6fS5uC4_o1tzernMLsvnrXuZzW7Jy3B5eV5208vkVtrdoqPLLfob3orBWm9zi44ut9xm9mneor_hrRgM1qKXw-35KyxvCYVXKbLe_L3HaXJvjH7Dy25ymB52AAAAAHgAgNL8hfgBAACIAAAAAJD4AQAAoAio-LcQuAAAAADAADgg-9YAGOdImIfb7XA7PUd_AAA8FIAAAAhghAAAAASIAAAAAIwAAAAEkAAISM6WAFjgdZkAAATIkYSy35wAAAAc1Mk8bbP8____xwDk7W_KAHhYT_cAPPgAPBAdWBQxAgAAAMCAuIM9mtQJlUXV____vxXAFQBAgBzJ7Bh5GAAAQMHYAj0sfr_ZYdf43S77_________zf7PwNAE_LRC08Tps_QVPsBAABY-wUEAGBTNwCANwG4mAOwAwAAALj7____zwMAAPDYo2R7rcazR1nvGxGW2e87KCinp8fsMkiatpflIGuaXH6DWiBieb6mv-F-E7YYrSaTzXI4Wy4mg-FoOBrtTwAXA5yIwXI5mSwmu9VoNdoMd6PZYIECMZjghAxHm8lqtFvtJsvhZDSabSYbpGjVajbaDIar2WS2262Gg-FyNEKK1ixmk8liNlruNoPlZDQYToZDJIHhxuLbOBxu0XJjWotGppVb4jL51sLVYuOZWGYbi3PlxwYZzRWzuWKxnCt2s1UCAAAAAAAAAFjClHkTAAAAgNMgZsPZZLdcgIdO12GQ2YwWq8VmNNsNVqPdaDAczBYLx8Jlc3kMu8VmZWKQWfFGlBmNwpzNKLTlgjMZcTiT1W7CnMwotAVpt-LGm1kDAAAAAA!",
+  dataCenter: "ch",
+  clickUrl: "",
+  referrer: "https%3A%2F%2Fwww.msn.com",
+  cipid: "7994267",
+  cmDast: "V7GJ8CFgNTxZtv0I48OARTxZtv0I48OAUAAAAGBvkHGrFbkUYbBmM0Wwwnk8VssVpsNoPdYrccgkbsVqTRhsEYzRbDyWSxWiyGu91wMdkNpjAiLLPfd1BQTk-P2WWQNG0vy0HWNLn8BrVAxPJ8TX_DGwIt0XQ6fK57ve73u6s9d7vG7_ar7G7V5685_C2nz1_m95suDrPZX7eZ_YKn6fS5uC4_o1tzernMLsvnrXuZzW7Jy3B5eV5208vkVtrdoqPLLfob3orBWm9zi44ut9xm9mneor_hrRgM1qKXw-35KyxvCYVXKbLe_L3HaXJvjH7Dy25ymB52AAAAAHgAgNL8hfgBAACIAAAAAJD4AQAAoAio-LcQuAAAAADAADgg-9YAGOdImIfb7XA7PUd_AAA8FIAAAAhghAAAAASIAAAAAIwAAAAEkAAISM6WAFjgdZkAAATIkYSy35wAAAAc1Mk8bbP8____xwDk7W_KAHhYT_cAPPgAPBAdWBQxAgAAAMCAuIM9mtQJlUXV____vxXAFQBAgBzJ7Bh5GAAAQMHYAj0sfr_ZYdf43S77_________zf7PwNAE_LRC08Tps_QVPsBAABY-wUEAGBTNwCANwG4mAOwAwAAALj7____zwMAAPDYo2R7rcazR1nvGxGW2e87KCinp8fsMkiatpflIGuaXH6DWiBieb6mv-F-E7YYrSaTzXI4Wy4mg-FoOBrtTwAXA5yIwXI5mSwmu9VoNdoMd6PZYIECMZjghAxHm8lqtFvtJsvhZDSabSYbpGjVajbaDIar2WS2262Gg-FyNEKK1ixmk8liNlruNoPlZDQYToZDJIHhxuLbOBxu0XJjWotGppVb4jL51sLVYuOZWGYbi3PlxwYZzRWzuWKxnCt2s1UCAAAAAAAAAFjClHkTAAAAgNMgZsPZZLdcgIdO12GQ2YwWq8VmNNsNVqPdaDAczBYLx8Jlc3kMu8VmZWKQWfFGlBmNwpzNKLTlgjMZcTiT1W7CnMwotAVpt-LGm1kDAAAAAA!",
+  tagId: "e22lLINE_ITEM_ID_WILL_BE_HERE_ON_SERVINGc",
+  creativeId: "5282495",
+  baseReportD: "taboola.com",
+  redId: "17E44CA1461822161513307179",
+  dtagid: "1472605",
+  dpubid: "168627",
+  vertical: "filler",
+  placement: "Below Article River Video - Desktop",
+  lineItemId: "2021075",
+  oppsDataCenter: "ch"
+});           
+ }
+    var script = document.createElement("script");
+    script.onload = onUnitLoaderLoad;
+    // script.src = "//vidstat.taboola.com/vpaid/units/26_6_3/creatives/creative_js.js";
+    
+	var onUnitLoaderLoadStr = onUnitLoaderLoad.toString();
+    var unitType = /(?:'|")(?:unitType)(?:'|"),\s*[\"|\']([^"]+)[\"|\']/.exec(onUnitLoaderLoad);
+    var isMobile = /(?:'|")(?:isMobile)(?:'|"),\s*([^"]+)\)/.exec(onUnitLoaderLoad);
+    var liteUnitFile;
+
+    if (unitType && unitType[1]) {
+        var unitName = unitType[1];
+        if (unitName === 'FEED_MANAGER') {
+            liteUnitFile = 'UnitFeedManager';
+        } else if (unitName === 'WIDGET_ITEM') {
+            liteUnitFile = 'UnitWidgetItem';
+        } else if (unitName === 'INLINE_INSTREAM') {
+            liteUnitFile = 'UnitInline';
+        } else if (unitName === 'SLIDER_INSTREAM') {
+            liteUnitFile = 'UnitSlider';
+        } else if (unitName === 'EXPANDABLE') {
+            liteUnitFile = 'UnitExpandable';
+        } else if (unitName === 'MSN_WIDGET') {
+            liteUnitFile = 'UnitMSNWidget';
+        }
+    }
+
+    if (liteUnitFile) {
+        liteUnitFile += (isMobile ? 'Mobile' : 'Desktop') + '.min.js';
+        script.src = "//vidstat.taboola.com/lite-unit/1.7.1/" + liteUnitFile;
+    } else {
+        script.src = "//vidstat.taboola.com/vpaid/units/26_6_3/creatives/creative_js.js";
+    }
+    
+    document.getElementsByTagName('head')[0].appendChild(script);
+    })(); //

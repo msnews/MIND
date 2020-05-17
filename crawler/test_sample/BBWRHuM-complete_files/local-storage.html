@@ -1,0 +1,61 @@
+
+<!-- saved from url=(0065)https://cdn-ssl.vidible.tv/prod/player/ad-time/local-storage.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <script>
+        function isJSONString(str) {
+            try {
+                JSON.parse(str)
+            } catch (e) {
+                return false
+            }
+            return true
+        }
+
+        function getLoadTimeStorage() {
+            var result = [];
+            var keys = Object.keys(localStorage);
+            var i = keys.length;
+
+            while (i--) {
+                if (keys[i].indexOf('ad-time-') === 0) {
+                    result.push(JSON.parse(localStorage.getItem(keys[i])));
+                }
+            }
+
+            return result;
+        }
+
+        window.onmessage = function (event) {
+            try {
+                var payload = isJSONString(event.data) && JSON.parse(event.data);
+                if (payload && payload.key && payload.key.indexOf('ad-time') === 0) {
+                    switch (payload.method) {
+                        case 'set':
+                            localStorage.setItem(payload.key, JSON.stringify({
+                                data: payload.data,
+                                date: payload.date,
+                                isFailed: (payload.status === 'FAILED'),
+                                url: payload.publisherUrl,
+                            }));
+                            break;
+                        case 'get':
+                            window.parent.postMessage(JSON.stringify({ 
+                                data: getLoadTimeStorage(), 
+                                key: 'ad-time', }),
+                                '*');
+                            break;
+                        case 'remove':
+                            localStorage.removeItem(payload.key);
+                            break;
+                    }
+                }
+            } catch (err) {
+            }
+        };
+    </script>
+</head>
+
+<body>
+
+
+</body></html>

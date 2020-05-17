@@ -1,0 +1,63 @@
+// v10
+
+var SCRIPT_NAME = 'ContainerTag.*\.js';
+
+var scripts = document.getElementsByTagName("SCRIPT");
+var script = null;
+var i = scripts.length-1;
+while (i >= 0) {
+	script = scripts[i].src;
+	if (script.search(SCRIPT_NAME) >= 0) {
+		break;
+	}
+	i--;
+}
+
+function getUrlVars() {
+	var vars = [];
+	var hash;
+
+	try {
+		var hashes = script.slice(script.indexOf('?') + 1).split('&');
+		for (var i = 0; i < hashes.length; i++) {
+			hash = hashes[i].split('=');
+			vars.push(hash[0]);
+			vars[hash[0]] = hashes[i].slice(hashes[i].indexOf('=') + 1);
+		}
+	} catch (e) {}
+	return vars;
+}
+
+if (script) {
+	var qs = getUrlVars();
+	 
+	// msft ad slot resize
+	if (typeof anxAllowResize === 'undefined' || anxAllowResize) {
+		document.write('<!--*\n'+
+			'\tvar anSize="'+qs.width+'|'+qs.height+'";\n'+
+			'\tvar anAdId="'+qs.creative_id+'";\n'+
+			'\tvar anAuctionId="'+qs.auction_id+'";\n'+
+			'*-->');
+		try {
+			parent.dap_Resize(document.body.id, qs.width, qs.height);
+		} catch (e) {}
+	}
+
+	// alephd pixel
+	if (qs.alephd == "on") {
+		if (!qs.msftdomain || qs.msftdomain.length < 1) {
+			qs.msftdomain = "post_msft"
+		}
+		document.write('<scr'+'ipt src="//'+qs.domain+'/'+qs.msftdomain+'?GAa8='+qs.tag_id+'&e9iH='+qs.user_id+'&2jSB='+qs.bid_price+'&-Z06='+qs.price_paid+'&b6lE='+qs.reserve_price+'&vKcZ='+qs.auction_id+'&Dsph='+qs.publisher_id+'&L4DK='+qs.site_id+'&0ZGY='+qs.creative_id+'&wziz='+qs.ecp+'&DH5k='+qs.user_ip+'&7Z7R='+qs.pmt_rule_id+'&PASL='+qs.user_city+'&9VuX='+qs.user_country+'&Fsrl='+qs.use_cookies+'&aNVl='+qs.carrier_id+'&rZzC='+qs.referer_url+'"></scr'+'ipt>');
+	}
+
+	// nuggad pixel
+	if (qs.nuggad == "on") {
+		document.write('<scr'+'ipt src="//survey.nuggad.net/c/layer-html/s:MSN:unterhaltung.de.msn.com/script.js"></scr'+'+ipt>');
+	}
+
+	// dssf pixel
+	if (qs.an_dssf == "on") {
+		document.write('<scr'+'ipt src="//ib.adnxs.com/seg?add=5018711:'+qs.bid_price_micros+'&t=1"></scr'+'+ipt>');
+	}
+}

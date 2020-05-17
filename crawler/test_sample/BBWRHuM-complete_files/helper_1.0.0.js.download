@@ -1,0 +1,281 @@
+var Helpers = {
+
+    // grabElement : (id) => {
+    //   return document.getElementById(id);
+    // },
+
+    // splitCompoundVariable : (variable, separator) => {
+    //   return variable.split(separator);
+    // }
+
+    // IE 11 support
+
+    grabElement: function(id) {
+        return document.getElementById(id);
+    },
+
+    splitCompoundVariable: function(variable, seperator) {
+        return variable.split(seperator);
+    },
+
+    getDateFromManifest: function(month, day, year) {
+        month = parseInt(month);
+        day = parseInt(day);
+        year = parseInt(year);
+
+        return new Date(year, month - 1, day)
+    },
+
+    convertToPrice: function(str) {
+        var txt;
+        if (str != "") {
+            if (str.indexOf('.') > -1) {
+                txt = str.split('.')[0] + "<sup>" + str.split('.')[1] + "</sup>";
+            } else {
+                txt = str;
+            }
+        }
+        return txt || "";
+    },
+
+    resizeText: function(idName, fontLimit) {
+        var e = document.getElementById(idName);
+        var childHeight = parseInt(e.clientHeight),
+            parentHeight = 17;
+
+        if (isNaN(parentHeight)) {
+            parentHeight = 17;
+        }
+
+        while (childHeight > parentHeight) {
+            childFont = parseFloat(window.getComputedStyle(e, null).getPropertyValue("font-size"));
+            //        console.log(childFont)
+            e.style.fontSize = (childFont - 1) + "px";
+            e.style.lineHeight = (childFont - 1) + "px";
+
+            childHeight = e.clientHeight;
+
+            if (childFont <= fontLimit) {
+                break;
+            }
+        }
+    },
+
+    resizeTextPromo: function(idName, fontLimit) {
+        var e = document.getElementById(idName);
+        var childHeight = parseInt(e.clientHeight),
+            parentHeight = 16;
+
+        if (isNaN(parentHeight)) {
+            parentHeight = 16;
+        }
+
+        while (childHeight > parentHeight) {
+            childFont = parseFloat(window.getComputedStyle(e, null).getPropertyValue("font-size"));
+            //        console.log(childFont)
+            e.style.fontSize = (childFont - 1) + "px";
+            //        e.style.lineHeight = (childFont - 1) + "px";
+
+            childHeight = e.clientHeight;
+
+            if (childFont <= fontLimit) {
+                break;
+            }
+        }
+    },
+
+    XYLogic: function(Xval, Yval, elem) {
+        /////////////***** XY logic? START *****/////////////
+        if (Xval.charAt(0) == "-") {
+            var tempX = Xval.substr(1);
+            //07.29.2019 Start Change "+" operators to "-"
+            if (elem.getAttribute("class") == "product_name") {
+                var elem_left = window.getComputedStyle(elem, null).getPropertyValue('left').split("px");
+                elem.style.left = (parseFloat(elem_left[0]) - parseFloat(tempX)) + "px";
+            } else if (elem.getAttribute("class") == "processor_name") {
+                var elem_left = window.getComputedStyle(elem, null).getPropertyValue('left').split("px");
+                elem.style.left = (parseFloat(elem_left[0]) - parseFloat(tempX)) + "px";
+            } else if (elem.getAttribute("class") == "price_prefix") {
+                var elem_left = window.getComputedStyle(elem, null).getPropertyValue('left').split("px");
+                elem.style.left = (parseFloat(elem_left[0]) - parseFloat(tempX)) + "px";
+            } else if (elem.getAttribute("class") == "sale_price") {
+                var elem_left = window.getComputedStyle(elem, null).getPropertyValue('left').split("px");
+                elem.style.left = (parseFloat(elem_left[0]) - parseFloat(tempX)) + "px";
+            } else if (elem.getAttribute("class") == "regular_price") {
+                var elem_left = window.getComputedStyle(elem, null).getPropertyValue('left').split("px");
+                elem.style.left = (parseFloat(elem_left[0]) - parseFloat(tempX)) + "px";
+            } else if (elem.getAttribute("class") == "footer_text") {
+                var elem_left = window.getComputedStyle(elem, null).getPropertyValue('left').split("px");
+                elem.style.left = (parseFloat(elem_left[0]) - parseFloat(tempX)) + "px";
+            } else if (elem.getAttribute("class") == "sku") {
+                var elem_left = window.getComputedStyle(elem, null).getPropertyValue('left').split("px");
+                elem.style.left = (parseFloat(elem_left[0]) - parseFloat(tempX)) + "px";
+            } else if (elem.getAttribute("class") == "promo_message_container") {
+                var elem_left = window.getComputedStyle(elem, null).getPropertyValue('left').split("px");
+                elem.style.left = (parseFloat(elem_left[0]) - parseFloat(tempX)) + "px";
+            } else {
+                elem.style.left = (elem.offsetLeft - parseInt(tempX)) + "px";
+            }
+            //07.29.2019 End Change "+" operators to "-"
+
+        } else if (Xval.charAt(0) == "+") {
+            var tempX = Xval.substr(1);
+            if (elem.getAttribute("class") == "product_name") {
+                var elem_left = window.getComputedStyle(elem, null).getPropertyValue('left').split("px");
+                elem.style.left = (parseFloat(elem_left[0]) + parseFloat(tempX)) + "px";
+            } else if (elem.getAttribute("class") == "processor_name") {
+                var elem_left = window.getComputedStyle(elem, null).getPropertyValue('left').split("px");
+                elem.style.left = (parseFloat(elem_left[0]) + parseFloat(tempX)) + "px";
+            } else if (elem.getAttribute("class") == "price_prefix") {
+                var elem_left = window.getComputedStyle(elem, null).getPropertyValue('left').split("px");
+                elem.style.left = (parseFloat(elem_left[0]) + parseFloat(tempX)) + "px";
+            } else if (elem.getAttribute("class") == "sale_price") {
+                var elem_left = window.getComputedStyle(elem, null).getPropertyValue('left').split("px");
+                elem.style.left = (parseFloat(elem_left[0]) + parseFloat(tempX)) + "px";
+            } else if (elem.getAttribute("class") == "regular_price") {
+                var elem_left = window.getComputedStyle(elem, null).getPropertyValue('left').split("px");
+                elem.style.left = (parseFloat(elem_left[0]) + parseFloat(tempX)) + "px";
+            } else if (elem.getAttribute("class") == "footer_text") {
+                var elem_left = window.getComputedStyle(elem, null).getPropertyValue('left').split("px");
+                elem.style.left = (parseFloat(elem_left[0]) + parseFloat(tempX)) + "px";
+            } else if (elem.getAttribute("class") == "sku") {
+                var elem_left = window.getComputedStyle(elem, null).getPropertyValue('left').split("px");
+                elem.style.left = (parseFloat(elem_left[0]) + parseFloat(tempX)) + "px";
+            }  else if (elem.getAttribute("class") == "promo_message_container") {
+                var elem_left = window.getComputedStyle(elem, null).getPropertyValue('left').split("px");
+                elem.style.left = (parseFloat(elem_left[0]) + parseFloat(tempX)) + "px";
+            }  else {
+                elem.style.left = (elem.offsetLeft + parseInt(tempX)) + "px";
+            }
+
+        } else {
+            if (Xval == 0) {} else {
+                if (elem.getAttribute("class") == "footer_text" && myFT.instantAds.F2_showSKU_showStrikethroughPrice_promoToggle.split("|")[0] == "false") {
+                    elem.style.position = "fixed";
+                }
+                if (elem.getAttribute("class") == "footer_text" && myFT.instantAds.F2_showSKU_showStrikethroughPrice_promoToggle.split("|")[0] == "true") {
+                    elem.style.position = "fixed";
+                }
+                if (elem.getAttribute("class") == "sku") {
+                    elem.style.position = "fixed";
+                }
+                if (elem.getAttribute("class") == "product_name") {
+                    elem.style.position = "absolute";
+                }
+                if (elem.getAttribute("class") == "processor_name") {
+                    elem.style.position = "absolute";
+                }
+                if (elem.getAttribute("class") == "price_prefix") {
+                    elem.style.position = "absolute";
+                }
+                if (elem.getAttribute("class") == "sale_price") {
+                    elem.style.position = "absolute";
+                }
+                if (elem.getAttribute("class") == "regular_price") {
+                    elem.style.position = "absolute";
+                }
+                if (elem.getAttribute("class") == "promo_message_container") {
+                    elem.style.position = "absolute";
+                }
+                elem.style.left = Xval + "px";
+            }
+        }
+        //        console.log(elem+" "+elem.offsetLeft)
+
+        if (Yval.charAt(0) == "-") {
+            var tempY = Yval.substr(1);
+            //07.29.2019 Start Change "+" operators to "-"
+            if (elem.getAttribute("class") == "product_name") {
+                var elem_top = window.getComputedStyle(elem, null).getPropertyValue('top').split("px");
+                elem.style.top = (parseFloat(elem_top[0]) - parseFloat(tempY)) + "px";
+            } else if (elem.getAttribute("class") == "processor_name") {
+                var elem_top = window.getComputedStyle(elem, null).getPropertyValue('top').split("px");
+                elem.style.top = (parseFloat(elem_top[0]) - parseFloat(tempY)) + "px";
+            } else if (elem.getAttribute("class") == "price_prefix") {
+                var elem_top = window.getComputedStyle(elem, null).getPropertyValue('top').split("px");
+                elem.style.top = (parseFloat(elem_top[0]) - parseFloat(tempY)) + "px";
+            } else if (elem.getAttribute("class") == "sale_price") {
+                var elem_top = window.getComputedStyle(elem, null).getPropertyValue('top').split("px");
+                elem.style.top = (parseFloat(elem_top[0]) - parseFloat(tempY)) + "px";
+            } else if (elem.getAttribute("class") == "regular_price") {
+                var elem_top = window.getComputedStyle(elem, null).getPropertyValue('top').split("px");
+                elem.style.top = (parseFloat(elem_top[0]) - parseFloat(tempY)) + "px";
+            } else if (elem.getAttribute("class") == "footer_text") {
+                var elem_top = window.getComputedStyle(elem, null).getPropertyValue('top').split("px");
+                elem.style.top = (parseFloat(elem_top[0]) - parseFloat(tempY)) + "px";
+            } else if (elem.getAttribute("class") == "sku") {
+                var elem_top = window.getComputedStyle(elem, null).getPropertyValue('top').split("px");
+                elem.style.top = (parseFloat(elem_top[0]) - parseFloat(tempY)) + "px";
+            }  else if (elem.getAttribute("class") == "promo_message_container") {
+                var elem_top = window.getComputedStyle(elem, null).getPropertyValue('top').split("px");
+                elem.style.top = (parseFloat(elem_top[0]) - parseFloat(tempY)) + "px";
+            }  else {
+                elem.style.top = (elem.offsetTop - parseInt(tempY)) + "px";
+            }
+            //07.29.2019 End Change "+" operators to "-"
+        } else if (Yval.charAt(0) == "+") {
+            var tempY = Yval.substr(1);
+            if (elem.getAttribute("class") == "product_name") {
+                var elem_top = window.getComputedStyle(elem, null).getPropertyValue('top').split("px");
+                elem.style.top = (parseFloat(elem_top[0]) + parseFloat(tempY)) + "px";
+            } else if (elem.getAttribute("class") == "processor_name") {
+                var elem_top = window.getComputedStyle(elem, null).getPropertyValue('top').split("px");
+                elem.style.top = (parseFloat(elem_top[0]) + parseFloat(tempY)) + "px";
+            } else if (elem.getAttribute("class") == "price_prefix") {
+                var elem_top = window.getComputedStyle(elem, null).getPropertyValue('top').split("px");
+                elem.style.top = (parseFloat(elem_top[0]) + parseFloat(tempY)) + "px";
+            } else if (elem.getAttribute("class") == "sale_price") {
+                var elem_top = window.getComputedStyle(elem, null).getPropertyValue('top').split("px");
+                elem.style.top = (parseFloat(elem_top[0]) + parseFloat(tempY)) + "px";
+            } else if (elem.getAttribute("class") == "regular_price") {
+                var elem_top = window.getComputedStyle(elem, null).getPropertyValue('top').split("px");
+                elem.style.top = (parseFloat(elem_top[0]) + parseFloat(tempY)) + "px";
+            } else if (elem.getAttribute("class") == "footer_text") {
+                var elem_top = window.getComputedStyle(elem, null).getPropertyValue('top').split("px");
+                elem.style.top = (parseFloat(elem_top[0]) + parseFloat(tempY)) + "px";
+            } else if (elem.getAttribute("class") == "sku") {
+                var elem_top = window.getComputedStyle(elem, null).getPropertyValue('top').split("px");
+                elem.style.top = (parseFloat(elem_top[0]) + parseFloat(tempY)) + "px";
+            } else if (elem.getAttribute("class") == "promo_message_container") {
+                var elem_top = window.getComputedStyle(elem, null).getPropertyValue('top').split("px");
+                elem.style.top = (parseFloat(elem_top[0]) + parseFloat(tempY)) + "px";
+            } else {
+                elem.style.top = (elem.offsetTop + parseInt(tempY)) + "px";
+            }
+        } else {
+            if (Yval == 0) {} else {
+                if (elem.getAttribute("class") == "footer_text" && myFT.instantAds.F2_showSKU_showStrikethroughPrice_promoToggle.split("|")[0] == "false") {
+                    elem.style.position = "fixed";
+                }
+                if (elem.getAttribute("class") == "footer_text" && myFT.instantAds.F2_showSKU_showStrikethroughPrice_promoToggle.split("|")[0] == "true") {
+                    elem.style.position = "fixed";
+                }
+                if (elem.getAttribute("class") == "sku") {
+                    elem.style.position = "fixed";
+                }
+                if (elem.getAttribute("class") == "product_name") {
+                    elem.style.position = "absolute";
+                }
+                if (elem.getAttribute("class") == "processor_name") {
+                    elem.style.position = "absolute";
+                }
+                if (elem.getAttribute("class") == "price_prefix") {
+                    elem.style.position = "absolute";
+                }
+                if (elem.getAttribute("class") == "sale_price") {
+                    elem.style.position = "absolute";
+                }
+                if (elem.getAttribute("class") == "regular_price") {
+                    elem.style.position = "absolute";
+                }
+                if (elem.getAttribute("class") == "promo_message_container") {
+                    elem.style.position = "absolute";
+                }
+                elem.style.top = Yval + "px";
+            }
+        }
+        //        console.log(elem+" "+elem.offsetTop) 
+    }
+    /////////////***** XY logic? END *****/////////////  
+
+}

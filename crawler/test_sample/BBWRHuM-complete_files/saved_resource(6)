@@ -1,0 +1,21 @@
+
+var ftGUID_4593668="4451F2BF058A6F";
+var ftConfID_4593668="0";
+var ftParams_4593668="ftx=&fty=&ftadz=&ftscw=&ft_custom=&ftOBA=1&ft_agentEnv=0&ft_referrer=https%3A%2F%2Fwww.msn.com%2Fen-us%2Fsports%2Ffootball_nfl%2Fpittsburgh-steelers-well-represented-in-the-top-10-of-the-nfl%27s-top-100-teams%2Far-BBWRHuM%3Focid%3Dchopendata&cachebuster=68349.24794287379";
+var ftKeyword_4593668="";
+var ftCustom_4593668="";
+var ftSection_4593668="";
+var ftSegment_4593668="";
+var ftSegmentList_4593668=[];
+var ftRuleMatch_4593668="0";
+var ftTimestamp_4593668="1589753640";
+var ftImp4593668 = {};
+ftImp4593668.privacy = "x";
+ftImp4593668.guidAge = "69";
+ftImp4593668.impID = "BA4F41E0-F886-2F1F-DCC3-ABDAE9D426F4";
+ftImp4593668.duid = "FT:4451F2BF058A6F";
+
+ftImp4593668.ft_tpplid = "";
+ftImp4593668.ft_c = {};
+
+document.write('<scr'+'ipt src="https://cdn.flashtalking.com/xre/459/4593668/3020278/js/j-4593668-3020278.js" id="ftscript_m4593668" name="ftscript_m4593668"></scr'+'ipt>');

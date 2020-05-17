@@ -1,0 +1,151 @@
+document.write("<!--*\n");
+document.write("var aolAdId=\"11043949|26747175\";\n");
+document.write("var aolFormat=\"HTML\";\n");
+document.write("var aolAppNexus=\"AST\";\n");
+document.write("var aolGUID=\"1589753637|163839366190375978\";\n");
+document.write("*-->\n");
+
+var anPG = "SPOUSEN88".toUpperCase();
+var apntag = apntag || {};
+apntag.anq = apntag.anq || [];
+(function() {
+	var d = document,
+		e = d.createElement('script'),
+		p = d.getElementsByTagName('head')[0];
+	e.type = 'text/javascript';
+	e.async = true;
+	e.src = '//acdn.adnxs.com/ast/ast.js';
+	p.insertBefore(e, p.firstChild);
+})();
+apntag.anq.push(function() {
+	var anMKT = "us".toUpperCase();
+	var escValue=escape('pg:' + anPG + ';p:7g4vugq;r:33415134670547408061a1aefec0713e');
+	apntag.setPageOpts({
+		member: 280,
+		user: {
+			externalUid: '3e7d2ffb96fb69a32dc3257b92fb6a47',
+			dnt: ''
+		},
+		keywords: {
+	        page_type: 'article',
+            optout: '',
+            provider_id: '7g4vugq',
+            rid: '33415134670547408061a1aefec0713e'
+        }
+	});
+	apntag.defineTag({
+		invCode: anPG,
+		sizes: [
+			[728,90],[970,250],[1272,328],[970,90],[1000,90]
+		],
+		targetId: anPG,
+		allowSmallerSizes: false,
+		rendererOptions: {
+			"playOnMouseover": false,
+			"audioOnMouseover": false,
+			"playVideoVisibleThreshold": 50,
+			"nonViewableBehavior": "pause",
+			"playerTechnology": ["flash", "html5"],
+			"adText": "Ad",
+			"showMute": true,
+			"showVolume": true,
+			"showProgressBar": false,
+			"allowFullscreen": true,
+			"vpaidTimeout": 5000,
+			"terminateUnresponsiveVPAIDCreative": false,
+			"enableInlineVideoForIos": true,
+			"aspectRatio": "16:9",
+			"delayExpandUntilVPAIDInit": true,
+			"delayExpandUntilVPAIDImpression": false,
+			"disableTopBar": false,
+			"postShow": {
+				"type": "image",
+				"clickUrl": "https://www.msn.com/en-us/money/personalfinance/savingsrates?csource=msn&esourceid=6331386&ctype=ratetablepromo&cchannel=content&cmethod=msnmoneyDA&cproduct=savingsandcds&ccreative=savvy3banks_handingdollarfan",
+				"url": "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/BBUHaOQ.img"
+			},
+			"fallback": {
+				"type": "image",
+				"clickUrl": "https://www.msn.com/en-us/money/credit/creditcards?utm_source=msn_table&esourceid=6331396&utm_campaign=ratetable&utm_content=learn_more&utm_medium=native&acqs=prospecting&net=www.msn.com&bdst=cpa&tar=backfill&sec=low-interest&grp=low-interest&utm_content=say+goodbye+to+debt+0+intro+apr+for+nearly+two+years&mpch=ads",
+				"url": "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/BBUH5hw.img"
+			},
+			"skippable": {
+				"videoThreshold": 1,
+				"videoOffset": 5,
+				"skipLocation": "top-left",
+				"skipText": "Video can be skipped in %%TIME%% seconds",
+				"skipButtonText": "SKIP"
+			}
+		},
+		extInvCode: anMKT,
+		externalImpId: '1589752872482|629569005382660400',
+		trafficSourceCode: escValue,
+		nobidIfUnsold: true
+	});
+	apntag.onEvent('adAvailable', anPG, function(adObj) {
+		try {
+			parent.adsANOnL(window, adObj, '');
+		} catch (e) {}
+	});
+	apntag.onEvent('adNoBid', anPG, function(adObj) {
+		try {
+			parent.adsANOnL(window, adObj, 'noad');
+		} catch (e) {}
+	});
+	apntag.onEvent('adRequestFailure', anPG, function(adError) {
+		try {
+			parent.adsANOnL(window, adError, 'error');
+		} catch (e) {}
+	});
+	apntag.setEndpoint('m.adnxs.com');
+	apntag.loadTags();
+});
+document.write("<div id=\"" + anPG + "\"></div>\n");
+apntag.anq.push(function() {
+	apntag.showTag(anPG);
+});
+
+var adcount_5207330_1_=new Image();
+adcount_5207330_1_.src="https://at.atwola.com/adcount/3.0/5113.1/5207330/0/225/AdId=11043949;BnId=1;ct=1557901484;st=8332;adcid=1;itime=753637261;reqtype=5;guid=UPd6e7197e-36cb-11e7-8745-00163e3df017;;adclntid=1002;kvmsft%5Fproviderid=7g4vugq;kvmsft%5Frid=33415134670547408061a1aefec0713e;kvpg=www%2Emsn%2Ecom%2Fen%2Dus%2Fsports%2Ffootball%5Fnfl%2Fpittsburgh%2Dsteelers%2Dwell%2Drepresented%2Din%2Dthe%2Dtop%2D10%2Dof%2Dthe%2D;kvmsft%5Fext%5Finv%5Fcd=us;kvmsft%5Fpagetype=article;kvmsft%5Fasid=1589752872482%7C629569005382660400;kvmsft%5Fmuid=3e7d2ffb96fb69a32dc3257b92fb6a47;kvgdprstatus=nocmp%2C0;kvadtc%5Fdvmktname=unknown;kvadtc%5Fdvosplt=windows%5F10;kvadtc%5Fdvbrand=google;kvadtc%5Fdvtype=desktop;kvadtc%5Fdvmodel=chrome%5F%2D%5Fwindows;kvrepo%5Fdvosplt=windows%5F10;kvadtc%5Fdvosversion=NT%2010%2E0;kvadtc%5Fcrmcc=UNKNOWN;kvadtc%5Fcrmnc=UNKNOWN;gdpr=0;";
+
+
+document.write("<!--*\n");
+document.write("var moatClientLevel1=5113\n");
+document.write("var moatClientLevel2=259683\n");
+document.write("var moatClientLevel3=0\n");
+document.write("var moatClientLevel4=5207330\n");
+document.write("var zMoatMaster=11040205\n");
+document.write("var zMoatFlight=11043949\n");
+document.write("var zMoatBanner=26747175\n");
+document.write("var zURL=https\n");
+document.write("var zMoatPlacementId=5207330\n");
+document.write("var zMoatPlacementExtId=963903286\n");
+document.write("var zMoatAdId=11043949\n");
+document.write("var zMoatCreative=0\n");
+document.write("var zMoatBannerID=1\n");
+document.write("var zMoatCustomVisp=50\n");
+document.write("var zMoatCustomVist=1000\n");
+document.write("var zMoatIsAdvisGoal=0\n");
+document.write("var zMoatEventUrl=https://at.atwola.com/adcount/3.0/5113.1/5207330/0/225/AdId=11043949;BnId=1;ct=1557901484;st=8393;adcid=1;itime=753637261;reqtype=5;guid=UPd6e7197e-36cb-11e7-8745-00163e3df017;;adclntid=1002;kvmsft%5Fproviderid=7g4vugq;kvmsft%5Frid=33415134670547408061a1aefec0713e;kvpg=www%2Emsn%2Ecom%2Fen%2Dus%2Fsports%2Ffootball%5Fnfl%2Fpittsburgh%2Dsteelers%2Dwell%2Drepresented%2Din%2Dthe%2Dtop%2D10%2Dof%2Dthe%2D;kvmsft%5Fext%5Finv%5Fcd=us;kvmsft%5Fpagetype=article;kvmsft%5Fasid=1589752872482%7C629569005382660400;kvmsft%5Fmuid=3e7d2ffb96fb69a32dc3257b92fb6a47;kvgdprstatus=nocmp%2C0;kvadtc%5Fdvmktname=unknown;kvadtc%5Fdvosplt=windows%5F10;kvadtc%5Fdvbrand=google;kvadtc%5Fdvtype=desktop;kvadtc%5Fdvmodel=chrome%5F%2D%5Fwindows;kvrepo%5Fdvosplt=windows%5F10;kvadtc%5Fdvosversion=NT%2010%2E0;kvadtc%5Fcrmcc=UNKNOWN;kvadtc%5Fcrmnc=UNKNOWN;gdpr=0;\n");
+document.write("var zMoatSize=225\n");
+document.write("var zMoatSubNetID=1\n");
+document.write("var zMoatisSelected=0\n");
+document.write("var zMoatadServer=at.atwola.com\n");
+document.write("var zMoatadVisServer=\n");
+document.write("var zMoatSamplingRate=5\n");
+document.write("var zMoatliveTestCookie=\n");
+document.write("var zMoatRefSeqId=qQKAWkwEGJA\n");
+document.write("var zMoatImpRefTs=1589753637\n");
+document.write("var zMoatAlias=spousen88\n");
+document.write("var zMoatWebsiteID=259683\n");
+document.write("var zMoatVert=\n");
+document.write("var zMoatBannerInfo=493925088\n");
+document.write("var RefreshSmall=\n");
+document.write("var RefreshLarge=\n");
+document.write("var RefreshExclusive=\n");
+document.write("var RefreshReserved=\n");
+document.write("var RefreshTime=\n");
+document.write("var RefreshMax=\n");
+document.write("var RefreshKeepSize=\n");
+document.write("var MP=N\n");
+document.write("var AdTypePriority=140\n");
+document.write("*-->\n");
