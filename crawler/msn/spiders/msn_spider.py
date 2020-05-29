@@ -8,11 +8,11 @@ class MSNSpider(scrapy.Spider):
     allowed_domains = ["msn.com"]
 
     start_urls = []
-    # with open("/home/v-jinyi/data/MIND/sam/train/news.tsv", 'r') as f:
-    #     for l in f:
-    #         _, _, _, _, _, url, _ = l.strip('\n').split('\t')
-    #         start_urls.append(url)
-    start_urls = ["https://www.msn.com/en-us/health/weightloss/if-you-have-a-slow-metabolism,-here-are-5-doctor-approved-ways-to-burn-belly-fat/ss-AAGiUfU?ocid=chopendata"]
+    with open("/home/v-jinyi/data/MIND/sam/train/news.tsv", 'r') as f:
+        for l in f:
+            _, _, _, _, _, url, _, _, _ = l.strip('\n').split('\t')
+            start_urls.append(url)
+    # start_urls = ["https://www.msn.com/en-us/health/weightloss/if-you-have-a-slow-metabolism,-here-are-5-doctor-approved-ways-to-burn-belly-fat/ss-AAGiUfU?ocid=chopendata"]
 
     def parse(self, response):
 
@@ -29,10 +29,8 @@ class MSNSpider(scrapy.Spider):
     def parse_vert_subvert_tile_nid(self, item, url):
         if 'refurl' not in url:
             url = url.split("/")[4:]
-            item['vert'], item['subvert'], title, nid = url
         else:
-            url = url.split("/")[4:]
-            item['vert'], item['subvert'], title, nid = url
+            url = url.split("/")[5:]
         item['vert'], item['subvert'] = url[:2]
         title = ''.join(url[2:-1])
         nid = url[-1]
