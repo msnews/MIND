@@ -45,9 +45,10 @@ def scoring(truth_f, sub_f):
         ltsess = lt['impression']
         lfsess = ls['impression']
 
+        lf_len = float(len(lfsess))
         for k, v in ltsess.items():
             y_true.append(v)
-            y_score.append(lfsess[k])
+            y_score.append(1 - lfsess[k]/lf_len)
 
         auc = roc_auc_score(y_true,y_score)
         mrr = mrr_score(y_true,y_score)
@@ -80,7 +81,7 @@ if __name__ == '__main__':
         output_file = open(output_filename, 'wb')
 
         truth_file = open(os.path.join(truth_dir, "truth.json"), 'r')
-        submission_answer_file = open(os.path.join(submit_dir, "answer.json"), 'r')
+        submission_answer_file = open(os.path.join(submit_dir, "Prediction.json"), 'r')
         
         auc, mrr, ndcg, ndcg10 = scoring(truth_file, submission_answer_file)
 
