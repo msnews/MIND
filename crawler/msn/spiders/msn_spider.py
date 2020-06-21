@@ -9,7 +9,7 @@ class MSNSpider(scrapy.Spider):
 
     #start_urls = ["https://www.msn.com/en-us/sports/football_nfl/pittsburgh-steelers-well-represented-in-the-top-10-of-the-nfl's-top-100-teams/ar-BBWRHuM?ocid=chopendata"]
     #start_urls = ["file:D:\Repo\MIND\crawler\\test_sample\BBWRHuM.html"]
-    start_urls = ["https://assets.msn.com/labs/mind/BBWRHuM.html"]
+    start_urls = ["https://assets.msn.com/labs/mind/BBWRHuM.html", "https://assets.msn.com/labs/mind/AABE1cU.html"]
     
     """
     def parse(self, response):
