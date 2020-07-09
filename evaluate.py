@@ -29,38 +29,64 @@ def scoring(truth_f, sub_f):
     mrrs = []
     ndcg5s = []
     ndcg10s = []
-
-    lts = truth_f.readlines()
-    lss = sub_f.readlines()
     
-    for lt, ls in zip(lts, lss):
-        lt = json.loads(lt)
-        ls = json.loads(ls)
-
-        assert lt['uid'] == ls['uid'] and lt['time'] == ls['time']
+    line_index = 1
+    for lt in truth_f:
+        ls = sub_f.readline()
         
+        # json deserialize
+        lt = json.loads(lt)
+        
+        # ignore masked lines
+        if lt['impression'] == []:
+            continue
+        
+        try:
+            ls = json.loads(ls)
+        except:
+            # print("Line-{} can not be deserialized by json. Filled with 0 ranks".format(line_index))
+            ls = {'uid': lt['uid'], 
+                  'time': lt['time'],
+                  'impression': {k: 0 for k in lt['impression']}}   
+        
+        # check UID and time
+        if lt['uid'] != ls['uid'] or lt['time'] != ls['time']:
+            raise ValueError("Line-{} submission uid and time do not match. Expect {} and {}, but get {} and {}".format(
+                line_index,
+                lt['uid'],
+                lt['time'],
+                ls['uid'],
+                ls['time']
+            ))
+            
         y_true = []
         y_score = []
 
         ltsess = lt['impression']
-        lfsess = ls['impression']
+        lssess = ls['impression']
         
-        lf_len = float(len(lfsess))
+        lt_len = float(len(ltsess))
         for k, v in ltsess.items():
             y_true.append(v)
-            score_rslt = 1 - lfsess[k]/lf_len
-            assert score_rslt >= 0 and score_rslt <= 1
+            score_rslt = 1 - lssess[k]/lt_len
+            if score_rslt < 0 or score_rslt > 1:
+                raise ValueError("Line-{}: score_rslt should be int from 0 to {}".format(
+                    line_index,
+                    lt_len
+                ))
             y_score.append(score_rslt)
-
+        
         auc = roc_auc_score(y_true,y_score)
         mrr = mrr_score(y_true,y_score)
         ndcg5 = ndcg_score(y_true,y_score,5)
         ndcg10 = ndcg_score(y_true,y_score,10)
-
+        
         aucs.append(auc)
         mrrs.append(mrr)
         ndcg5s.append(ndcg5)
         ndcg10s.append(ndcg10)
+        
+        line_index += 1
 
     return np.mean(aucs), np.mean(mrrs), np.mean(ndcg5s), np.mean(ndcg10s)
         
@@ -71,6 +97,7 @@ if __name__ == '__main__':
 
     submit_dir = os.path.join(input_dir, 'res') 
     truth_dir = os.path.join(input_dir, 'ref')
+
 
     if not os.path.isdir(submit_dir):
         print("%s doesn't exist" % submit_dir)
