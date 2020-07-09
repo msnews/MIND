@@ -24,6 +24,14 @@ def mrr_score(y_true, y_score):
     rr_score = y_true / (np.arange(len(y_true)) + 1)
     return np.sum(rr_score) / np.sum(y_true)
 
+def parse_line(l):
+    impid, ranks = l.strip('\n').split('\t')
+    if ranks == "":
+        ranks = []
+    else:
+        ranks = [int(i) for i in ranks.split(',')]
+    return impid, ranks
+
 def scoring(truth_f, sub_f):
     aucs = []
     mrrs = []
@@ -33,49 +41,42 @@ def scoring(truth_f, sub_f):
     line_index = 1
     for lt in truth_f:
         ls = sub_f.readline()
+        impid, labels = parse_line(lt)
         
-        # json deserialize
-        lt = json.loads(lt)
+        # ignore masked impressions
+        if labels == []:
+            continue 
         
-        # ignore masked lines
-        if lt['impression'] == []:
-            continue
+        if ls == '':
+            # empty line: filled with 0 ranks
+            sub_impid = impid
+            sub_ranks = [0] * len(labels)
+        else:
+            try:
+                sub_impid, sub_ranks = parse_line(ls)
+            except:
+                raise ValueError("line-{}: Invalid Input Format!".format(line_index))       
         
-        try:
-            ls = json.loads(ls)
-        except:
-            # print("Line-{} can not be deserialized by json. Filled with 0 ranks".format(line_index))
-            ls = {'uid': lt['uid'], 
-                  'time': lt['time'],
-                  'impression': {k: 0 for k in lt['impression']}}   
-        
-        # check UID and time
-        if lt['uid'] != ls['uid'] or lt['time'] != ls['time']:
-            raise ValueError("Line-{} submission uid and time do not match. Expect {} and {}, but get {} and {}".format(
+        if sub_impid != impid:
+            raise ValueError("line-{}: Inconsistent Impression Id {} and {}".format(
                 line_index,
-                lt['uid'],
-                lt['time'],
-                ls['uid'],
-                ls['time']
-            ))
-            
-        y_true = []
-        y_score = []
-
-        ltsess = lt['impression']
-        lssess = ls['impression']
+                sub_impid,
+                impid
+            ))        
         
-        lt_len = float(len(ltsess))
-        for k, v in ltsess.items():
-            y_true.append(v)
-            score_rslt = 1 - lssess[k]/lt_len
+        lt_len = float(len(labels))
+        
+        y_true = labels
+        y_score = []
+        for rank in sub_ranks:
+            score_rslt = 1 - rank/lt_len
             if score_rslt < 0 or score_rslt > 1:
                 raise ValueError("Line-{}: score_rslt should be int from 0 to {}".format(
                     line_index,
                     lt_len
                 ))
             y_score.append(score_rslt)
-        
+            
         auc = roc_auc_score(y_true,y_score)
         mrr = mrr_score(y_true,y_score)
         ndcg5 = ndcg_score(y_true,y_score,5)
@@ -98,7 +99,6 @@ if __name__ == '__main__':
     submit_dir = os.path.join(input_dir, 'res') 
     truth_dir = os.path.join(input_dir, 'ref')
 
-
     if not os.path.isdir(submit_dir):
         print("%s doesn't exist" % submit_dir)
 
@@ -109,8 +109,8 @@ if __name__ == '__main__':
         output_filename = os.path.join(output_dir, 'scores.txt')              
         output_file = open(output_filename, 'wb')
 
-        truth_file = open(os.path.join(truth_dir, "truth.json"), 'r')
-        submission_answer_file = open(os.path.join(submit_dir, "prediction.json"), 'r')
+        truth_file = open(os.path.join(truth_dir, "truth.txt"), 'r')
+        submission_answer_file = open(os.path.join(submit_dir, "prediction.txt"), 'r')
         
         auc, mrr, ndcg, ndcg10 = scoring(truth_file, submission_answer_file)
 
