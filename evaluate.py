@@ -10,7 +10,7 @@ def dcg_score(y_true, y_score, k=10):
     gains = 2 ** y_true - 1
     discounts = np.log2(np.arange(len(y_true)) + 2)
     return np.sum(gains / discounts)
-
+    
 
 def ndcg_score(y_true, y_score, k=10):
     best = dcg_score(y_true, y_true, k)
@@ -25,11 +25,8 @@ def mrr_score(y_true, y_score):
     return np.sum(rr_score) / np.sum(y_true)
 
 def parse_line(l):
-    impid, ranks = l.strip('\n').split('\t')
-    if ranks == "":
-        ranks = []
-    else:
-        ranks = [int(i) for i in ranks.split(',')]
+    impid, ranks = l.strip('\n').split()
+    ranks = json.loads(ranks)
     return impid, ranks
 
 def scoring(truth_f, sub_f):
@@ -50,7 +47,7 @@ def scoring(truth_f, sub_f):
         if ls == '':
             # empty line: filled with 0 ranks
             sub_impid = impid
-            sub_ranks = [0] * len(labels)
+            sub_ranks = [1] * len(labels)
         else:
             try:
                 sub_impid, sub_ranks = parse_line(ls)
@@ -66,10 +63,10 @@ def scoring(truth_f, sub_f):
         
         lt_len = float(len(labels))
         
-        y_true = labels
+        y_true =  np.array(labels,dtype='float32')
         y_score = []
         for rank in sub_ranks:
-            score_rslt = 1 - rank/lt_len
+            score_rslt = 1./rank
             if score_rslt < 0 or score_rslt > 1:
                 raise ValueError("Line-{}: score_rslt should be int from 0 to {}".format(
                     line_index,
@@ -107,7 +104,7 @@ if __name__ == '__main__':
             os.makedirs(output_dir)
 
         output_filename = os.path.join(output_dir, 'scores.txt')              
-        output_file = open(output_filename, 'wb')
+        output_file = open(output_filename, 'w')
 
         truth_file = open(os.path.join(truth_dir, "truth.txt"), 'r')
         submission_answer_file = open(os.path.join(submit_dir, "prediction.txt"), 'r')
