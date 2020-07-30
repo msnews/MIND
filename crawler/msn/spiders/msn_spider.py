@@ -10,7 +10,7 @@ class MSNSpider(scrapy.Spider):
     start_urls = []
     with open(os.environ["MIND_NEWS_PATH"], 'r') as f:
         for l in f:
-            _, _, _, _, _, url, _, _, _ = l.strip('\n').split('\t')
+            _, _, _, _, _, url, _, _ = l.strip('\n').split('\t')
             start_urls.append(url)
     #start_urls = start_urls[:1000]
     #start_urls = ["https://www.msn.com/en-us/news/world/chile-three-die-in-supermarket-fire-amid-protests/ar-AAJ43pw?ocid=chopendata"]
