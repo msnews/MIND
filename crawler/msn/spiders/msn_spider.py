@@ -51,15 +51,15 @@ class MSNSpider(scrapy.Spider):
         # body_desc = response.xpath('//meta[@name="description"]/@content')[0].extract()
 
         # type1: ar-nid
-        if nid_tyep == 'ar':
+        if nid_type == 'ar':
             body = response.xpath('//p/text()').getall()
 
         # type2: ss
-        if body == [] and nid_type == 'ss':
+        if nid_type == 'ss':
             body = response.xpath('//div[@class="gallery-caption-text"]//text()').getall()
 
         # type3: vi
-        if body == [] and nid_type == 'vi':
+        if nid_type == 'vi':
             body = response.xpath('//div[@class="video-description"]//text()').getall()
 
         item['body'] = body

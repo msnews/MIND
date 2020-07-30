@@ -7,8 +7,6 @@
 
 import scrapy
 
-
-
 class NewsItem(scrapy.Item):
     nid = scrapy.Field()
     body = scrapy.Field()
